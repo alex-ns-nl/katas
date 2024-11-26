@@ -15,5 +15,5 @@ describe('solutions', () => {
   it('returns array with multiple formatted values', () => {
     const input = ["h", "o", "l", "a"];
     expect(exampleFunction(input)).toEqual(["h,o,l,a"]);
-  })
+  });
 })
