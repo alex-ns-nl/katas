@@ -43,6 +43,11 @@ EOL
 # Update package.json to use Vitest for testing
 sed -i '' 's/"scripts": {/"scripts": { "test": "vitest",/' package.json
 
+# Modify the README.md file
+echo "This project is launched using a generated script" > README.md
+echo "Add project notes below" > NOTES.md
+echo "Add project techdebt actions below" > TECHDEBT.md
+
 # Ensure the lib directory exists
 mkdir -p src/lib
 
