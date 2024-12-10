@@ -1,9 +1,5 @@
 import { it, expect } from 'vitest';
-import { exampleFunction } from './playground';
-
-function isRouteSafe(map: string[][]) {
-  return true;
-}
+import { isRouteSafe } from './playground';
 
 describe('solutions', () => {
   it('can evaluate safe routes', () => {

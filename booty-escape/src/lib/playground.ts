@@ -1,3 +1,3 @@
-export const exampleFunction = (value) => {
-  return value;
-};
+export function isRouteSafe(map: string[][]) {
+  return true;
+}
