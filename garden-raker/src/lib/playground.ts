@@ -1,4 +1,10 @@
-export const exampleFunction = (value: string) => {
-  const rake = !value.includes('gravel') && !value.includes('rock') ? value.replace(value, 'gravel') : value;
-  return value.length === 0 ? 0 : rake;
+export const rake = (garden: string) => {
+
+const gardenArray = garden !== '' ? garden.split(', ') : undefined;
+  if(gardenArray) {
+    const test = gardenArray.map((rakedItem: string) => (rakedItem !== 'rock' && rakedItem !== 'gravel') ? rakedItem.replace(rakedItem, 'gravel') : rakedItem);
+    console.log(test)
+    return test.toString();
+  }
+  return 0;
 };
