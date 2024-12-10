@@ -9,4 +9,12 @@ describe('solutions', () => {
 
     expect(routeSafety).toBe(true);
   });
+
+  it('can evaluate not safe routes', () => {
+    const map = [['X', 'N']];
+
+    const routeSafety = isRouteSafe(map);
+
+    expect(routeSafety).toBe(false);
+  })
 })

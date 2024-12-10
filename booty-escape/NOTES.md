@@ -24,4 +24,5 @@ X
 when we check if the route is safe,
 the result is safe
 
-second acceptance test:
+Suggestion findSome for array within array:
+return arr.some(subArray => subArray.includes(searchString))
