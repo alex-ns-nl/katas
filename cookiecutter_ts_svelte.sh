@@ -13,15 +13,12 @@ PROJECT_DIR=$1
 
 # Step 1: Create a new SvelteKit project
 echo "Setting up a new SvelteKit project in $PROJECT_DIR..."
-npx degit sveltejs/template $PROJECT_DIR
+npm create vite@latest $PROJECT_DIR -- --template svelte-ts
 
 cd $PROJECT_DIR
 
 # Install project dependencies
 npm install
-
-# Add TypeScript to the project
-node scripts/setupTypeScript.js
 
 # Install Vitest
 npm i -D vitest
@@ -58,7 +55,7 @@ cd src/lib
 
 # Write content to playground.ts
 cat <<EOL > playground.ts
-export const exampleFunction = (value) => {
+export const exampleFunction = (value: number) => {
   return value;
 };
 EOL
