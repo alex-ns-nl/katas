@@ -18,3 +18,34 @@ describe('solutions', () => {
     expect(routeSafety).toBe(false);
   })
 })
+
+
+const maps = [['X']];
+
+// describe('Can evaluate safe routes', () => {
+//   test.each(maps)('%s', (map: string[][]) => {
+//     const routeSafety = isRouteSafe(map);
+//
+//     expect(routeSafety).toBe(true);
+//
+//     // console.log(`Running test for: ${value}`);
+//   });
+// });
+
+
+describe('Map Tests', () => {
+  const safeMaps = [
+    { map: [['X']] },
+  ];
+
+  safeMaps.forEach(({ map }) => {
+    const description = `map with values ${JSON.stringify(map)}`;
+    describe(`Testing routes: ${description}`, () => {
+      test('should test whether route is safe', () => {
+        const routeSafety = isRouteSafe(map);
+
+        expect(routeSafety).toBe(true);
+      });
+    });
+  });
+});
