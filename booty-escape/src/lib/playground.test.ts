@@ -4,6 +4,13 @@ import { isRouteSafe } from './playground';
 describe('Map Tests', () => {
   const safeMaps = [
     {map: [['X']]},
+    {map: [['X', '0']]},
+    {map: [['X', '0'],
+           ['0', '0']]},
+    {map: [['X', '0'],
+           ['0', '0'],
+           ['0', '0'],
+           ['N', '0']]},
   ];
 
   const unsafeMaps = [
