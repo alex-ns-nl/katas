@@ -1,8 +1,8 @@
-export const exampleFunction = (stairArray: number[][]) => {
+export const exampleFunction = (stairLog: number[][]) => {
   let totalStairs = 0;
   
-  stairArray.forEach(
-    weekday => weekday.forEach(stairNumber => totalStairs += stairNumber * 20)
+  stairLog.forEach(
+    weekDay => weekDay.forEach(stairNumber => totalStairs += stairNumber * 20)
   );
   
   return totalStairs;
